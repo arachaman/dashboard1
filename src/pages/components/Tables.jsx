@@ -36,24 +36,6 @@ const Tables = () => {
           <td>7 May 2023</td>
           <td>10 May 2023</td>
         </tr>
-        <tr>
-          <td><Badge pill bg='secondary'>On progress</Badge></td>
-          <td><Badge pill bg='dark'>Low</Badge></td>
-          <td>Firman</td>
-          <td>08 May 2023 10:35</td>
-          <td>Lukman</td>
-          <td>7 May 2023</td>
-          <td>10 May 2023</td>
-        </tr>
-        <tr>
-          <td><Badge pill bg='danger'>Assingned</Badge></td>
-          <td><Badge pill bg='dark'>Low</Badge></td>
-          <td>Firman</td>
-          <td>08 May 2023 10:35</td>
-          <td>Lukman</td>
-          <td>7 May 2023</td>
-          <td>10 May 2023</td>
-        </tr>
       </tbody>
       </Table>
       </Container>

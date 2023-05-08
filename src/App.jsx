@@ -2,6 +2,7 @@ import './App.css';
 import Nav from './pages/components/Navigation'
 import SearchBox from './pages/components/SearchBox';
 import Table from './pages/components/Tables';
+import TotalTicket from './pages/components/TotalTicket';
 
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
      <section className='mt-4 container'>
         <h2>Dashboard</h2>
         <SearchBox/>
+     </section>
+     <section>
+      <TotalTicket/>
      </section>
      <section className='mt-4'>
       <Table/>
