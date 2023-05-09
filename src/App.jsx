@@ -1,26 +1,25 @@
-import './App.css';
-import Nav from './pages/components/Navigation'
-import SearchBox from './pages/components/SearchBox';
-import Table from './pages/components/Tables';
-import TotalTicket from './pages/components/TotalTicket';
-
+import "./App.css";
+import Nav from "./pages/components/Navigation";
+import SearchBox from "./pages/components/SearchBox";
+import Table from "./pages/components/Tables";
+import TicketsPanel from "./pages/components/TicketsPanel";
+import Filter from "./pages/components/Filter";
 
 function App() {
   return (
     <div>
       <div>
-     <Nav/>
+        <Nav />
       </div>
-     <section className='mt-4 container'>
-        <h2>Dashboard</h2>
-        <SearchBox/>
-     </section>
-     <section>
-      <TotalTicket/>
-     </section>
-     <section className='mt-4'>
-      <Table/>
-     </section>
+      <section className="my-4 container">
+        <SearchBox />
+      </section>
+      <section>
+        <TicketsPanel />
+      </section>
+      <section className="mt-4">
+        <Table />
+      </section>
     </div>
   );
 }

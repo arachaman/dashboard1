@@ -1,12 +1,15 @@
-import React, {useState} from 'react'
-import { Form, Row, Col, Button} from 'react-bootstrap'
+import React, { useState } from "react";
+import { Form, Row, Col, Button } from "react-bootstrap";
 
 const SearchBox = () => {
   return (
     <div>
       <Row>
-        <Col md={{span: 4, offset:8}}>
-        <Form className="d-flex">
+        <Col className="me-auto">
+          <h2>Dashboard</h2>
+        </Col>
+        <Col md={{ span: 4, offset: 8 }} className="ms-auto">
+          <Form className="d-flex">
             <Form.Control
               type="text"
               placeholder="Search"
@@ -18,7 +21,7 @@ const SearchBox = () => {
         </Col>
       </Row>
     </div>
-  )
-}
+  );
+};
 
-export default SearchBox
+export default SearchBox;
