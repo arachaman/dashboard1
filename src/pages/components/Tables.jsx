@@ -1,46 +1,40 @@
-import React from 'react'
-import { Table, Container, Badge } from 'react-bootstrap'
+import React from "react";
+import { Table, Container, Badge } from "react-bootstrap";
+import data from "../../utils/data.json";
+
 
 const Tables = () => {
+  const column = Object.keys(data[0]);
+
+  const ThData = () => {
+    return column.map((d) => {
+      return <th key={d}>{d}</th>;
+    });
+  };
+
+  const tdData = () => {
+    return data.map((d) => {
+      return (
+        <tr>
+          {column.map((v) => {
+            return <td>{d[v]}</td>;
+          })}
+        </tr>
+      );
+    });
+  };
   return (
     <div>
       <Container>
-      <Table className='table-hover'>
-      <thead>
-        <tr>
-          <th>Status</th>
-          <th>Priority</th>
-          <th>Reported by</th>
-          <th>Reported date</th>
-          <th>Assign to</th>
-          <th>Assign date</th>
-          <th>Due date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><Badge pill bg='success'>Resolved</Badge></td>
-          <td><Badge pill bg='warning'>Medium</Badge></td>
-          <td>Otto</td>
-          <td>08 May 2023 10:35</td>
-          <td>Agus</td>
-          <td>7 May 2023</td>
-          <td>10 May 2023</td>
-        </tr>
-        <tr>
-          <td><Badge pill bg='info'>Closed</Badge></td>
-          <td><Badge pill bg='danger'>High</Badge></td>
-          <td>Yadi</td>
-          <td>08 May 2023 10:35</td>
-          <td>Sapto</td>
-          <td>7 May 2023</td>
-          <td>10 May 2023</td>
-        </tr>
-      </tbody>
-      </Table>
+        <Table id="" className="table-hover">
+          <thead>
+            <tr>{ThData()}</tr>
+          </thead>
+          <tbody>{tdData()}</tbody>
+        </Table>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Tables
+export default Tables;

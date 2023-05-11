@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./pages/Main";
-import ITPersonnel from "./pages/components/ITPersonnel";
+import Chart from "./pages/components/ITPersonnel";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,7 +15,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="/" element={<Main />} />
-          <Route path="/ITPersonnel" element={<ITPersonnel />} />
+          <Route path="/ITPersonnel" element={<Chart />} />
         </Route>
       </Routes>
     </BrowserRouter>

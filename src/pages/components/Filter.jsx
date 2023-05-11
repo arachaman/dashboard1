@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
-import {
-  Button,
-  Container,
-  Modal,
-  Row,
-  Col,
-  Dropdown,
-  Form,
-} from "react-bootstrap";
+import { Button, Container, Modal, Row, Col, Form } from "react-bootstrap";
 
 const Filter = () => {
   const [year, setYear] = useState([]);
