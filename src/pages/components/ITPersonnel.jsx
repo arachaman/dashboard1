@@ -74,7 +74,6 @@ const ITPersonnel = () => {
               <Form.Group className="mb-3">
                 <Form.Select>
                   {year.map(function (item, i) {
-                    console.log("test");
                     return <option href="#/action-1">{item}</option>;
                   })}
                 </Form.Select>

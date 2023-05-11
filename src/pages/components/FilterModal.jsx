@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from "@fortawesome/free-solid-svg-icons";
 import { Button, Container, Modal, Row, Col, Form } from "react-bootstrap";
 
-const Filter = () => {
+const FilterModal = () => {
   const [year, setYear] = useState([]);
 
   useEffect(() => {
@@ -91,4 +91,4 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+export default FilterModal;
