@@ -1,0 +1,154 @@
+{
+  "chart": [
+    {
+      "Name": "Rama",
+      "Ticket_Month_Count": [10, 20, 30, 10, 20, 2, 4, 2, 3, 0, 0, 10],
+      "Total_Ticket": "20",
+      "Rate_Avg": "4.8"
+    },
+    {
+      "Name": "Alver",
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Total_Ticket": "20",
+      "Rate_Avg": "4.8"
+    },
+    {
+      "Name": "Joko",
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Total_Ticket": "20",
+      "Rate_Avg": "4.8"
+    },
+    {
+      "Name": "Widy",
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Total_Ticket": "20",
+      "Rate_Avg": "4.8"
+    },
+    {
+      "Name": "Panji",
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Total_Ticket": "20",
+      "Rate_Avg": "4.8"
+    },
+    {
+      "Name": "Abdullah",
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Total_Ticket": "20",
+      "Rate_Avg": "4.8"
+    },
+    {
+      "Name": "Rachman",
+      "Ticket_Month_Count": [2, 14, 16, 12, 15, 1, 40, 23, 32, 0, 0, 0],
+      "Total_Ticket": "20",
+      "Rate_Avg": "4.8"
+    },
+    {
+      "Name": "Hendra",
+      "Ticket_Month_Count": [2, 14, 16, 12, 15, 1, 40, 23, 32, 0, 0, 0],
+      "Total_Ticket": "20",
+      "Rate_Avg": "4.8"
+    }
+  ],
+  "panel": [
+    {
+      "Status": "Assigned",
+      "Priority": "Medium",
+      "Reportedby": "Haydan Farizy",
+      "ReportedAt": "08 May 2023 10:29",
+      "AssignTo": "Abdullah Sapiih",
+      "AssignDate": "-",
+      "DueDate": "-",
+      "Rate": 5
+    },
+    {
+      "Status": "Resolved",
+      "Priority": "Low",
+      "Reportedby": "Puspita Gya",
+      "ReportedAt": "05 May 2023 9:30",
+      "AssignTo": "Hendra Saputra",
+      "AssignDate": "05 May 2023",
+      "DueDate": "06 May 2023",
+      "Rate": 4
+    },
+    {
+      "Status": "Resolved",
+      "Priority": "Low",
+      "Reportedby": "Puspita Gya",
+      "ReportedAt": "05 May 2023 9:30",
+      "AssignTo": "Hendra Saputra",
+      "Assign Date": "05 May 2023",
+      "DueDate": "06 May 2023",
+      "Rate": 3
+    },
+    {
+      "Status": "Closed",
+      "Priority": "High",
+      "Reportedby": "Nur Rahmawati",
+      "ReportedAt": "05 May 2023 9:00",
+      "AssignTo": "Irfan Joko",
+      "AssignDate": "05 May 2023",
+      "Due Date": "06 May 2023",
+      "Rate": 4
+    },
+    {
+      "Status": "On Progress",
+      "Priority": "Medium",
+      "Reportedby": "Haydan Farizy",
+      "ReportedAt": "04 May 2023 10:30",
+      "AssignTo": "Panji Rizky",
+      "AssignDate": "04 May 2023",
+      "DueDate": "05 May 2023",
+      "Rate": 4
+    },
+    {
+      "Status": "On Progress",
+      "Priority": "Low",
+      "Reportedby": "Nur Rahmawat",
+      "ReportedAt": "08 May 2023 10:29",
+      "AssignTo": "Abdullah Sapiih",
+      "AssignDate": "-",
+      "DueDate": "-",
+      "Rate": 5
+    },
+    {
+      "Status": "Closed",
+      "Priority": "Low",
+      "Reportedby": "Haydan Farizy",
+      "ReportedAt": "08 May 2023 10:29",
+      "AssignTo": "Abdullah Sapiih",
+      "AssignDate": "-",
+      "DueDate": "-",
+      "Rate": 4
+    },
+    {
+      "Status": "Registered",
+      "Priority": "Low",
+      "Reportedby": "Haydan Farizy",
+      "ReportedAt": "08 May 2023 10:29",
+      "AssignTo": "Panji Rizky",
+      "AssignDate": "-",
+      "DueDate": "-",
+      "Rate": 4
+    },
+    {
+      "Status": "Registered",
+      "Priority": "Low",
+      "Reportedby": "Haydan Farizy",
+      "ReportedAt": "08 May 2023 10:29",
+      "AssignTo": "Irfan Joko",
+      "AssignDate": "-",
+      "DueDate": "-",
+      "Rate": 4
+    },
+    {
+      "Status": "On Progress",
+      "Priority": "Medium",
+      "Reportedby": "Haydan Farizy",
+      "ReportedAt": "04 May 2023 10:30",
+      "AssignTo": "Panji Rizky",
+      "AssignDate": "04 May 2023",
+      "DueDate": "05 May 2023",
+      "Rate": 4
+    }
+  ]
+}

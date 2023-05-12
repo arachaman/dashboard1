@@ -1,12 +1,9 @@
 import React from "react";
-import Nav from "./components/Navigation";
-import SearchBox from "./components/SearchBox";
-import Table from "./components/Tables";
 import TicketsPanel from "./components/TicketsPanel";
-import Filter from "./components/FilterModal";
-import TotalperPersonChart from "./components/TotalperPersonChart";
-import { Container } from "react-bootstrap";
-import FilterChartMonthly from "./components/FilterChartMonthly";
+import TicketChart from "./components/TicketChart";
+import { Container, Row, Col } from "react-bootstrap";
+import FilterChartMonthly from "./components/FilterForm";
+import RateChart from './components/RateChart'
 
 const Main = () => {
   return (
@@ -16,10 +13,19 @@ const Main = () => {
       </section>
       <Container>
         <section>
-          <FilterChartMonthly/>
+          <FilterChartMonthly />
         </section>
         <section className="mt-4">
-          <TotalperPersonChart />
+          <Row>
+            <Col>
+              <TicketChart />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <RateChart />
+            </Col>
+          </Row>
         </section>
       </Container>
     </div>

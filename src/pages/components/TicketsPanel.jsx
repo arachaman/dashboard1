@@ -1,25 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
-import Filter from "./FilterModal";
-import data from "../../utils/data.json";
+import data from "../../utils/DataDashboard.json";
 
 const TicketsPanel = () => {
-  const count = data.length;
-  const rs = data.filter((p) => p.Status === "Resolved");
+  const count = data.panel.length;
+  const rs = data.panel.filter((p) => p.Status === "Resolved");
   const countrs = rs.length;
-  const op = data.filter((p) => p.Status === "On Progress");
+  const op = data.panel.filter((p) => p.Status === "On Progress");
   const countop = op.length;
-  const as = data.filter((p) => p.Status === "Assigned");
+  const as = data.panel.filter((p) => p.Status === "Assigned");
   const countas = as.length;
-  const cl = data.filter((p) => p.Status === "Closed");
+  const cl = data.panel.filter((p) => p.Status === "Closed");
   const countcl = cl.length;
-  const rg = data.filter((p) => p.Status === "Closed");
+  const rg = data.panel.filter((p) => p.Status === "Closed");
   const countrg = rg.length;
   console.log(op);
   return (
     <div>
       <Container>
-        <h1 className="text-center mt-4">Total Tickets</h1>
         <Row className="mb-2 mt-4">
           <Col
             md={{ span: 2, offset: 3 }}
