@@ -105,34 +105,7 @@ function TicketChart() {
   // });
 
   //axios
-  const [responseData, setResponseData] = useState();
 
-
-  const getData = async () => {
-    const response = await axios
-      .get(`dashboard/index`)
-      .then((res) => {
-        // setResponseData(res.data.data);
-        console.log(res.data.data);
-
-        var datasets = [];
-        res.data.data.chart.map((row, index) => {
-          datasets.push({
-            label: row.Name,
-            data: row.Ticket_Month_Count,
-            backgroundColor: colorChart[index],
-            key: index,
-          });
-        });
-        console.log(datasets);
-        setResponseData({ labels, datasets });
-      })
-      .catch((err) => {
-        // Handle errors
-        alert(err);
-        console.error(err);
-      });
-  };
 
   const datasetsFilterMonth = () => {
     var month = refMonth.current.value;

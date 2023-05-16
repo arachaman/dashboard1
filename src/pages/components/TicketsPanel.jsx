@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import data from "../../utils/DataDashboard.json";
+import axios from '../../redux/axios'
 
 const TicketsPanel = () => {
   const count = data.panel.length;
