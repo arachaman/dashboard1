@@ -12,7 +12,7 @@ const TicketsPanel = () => {
   const countas = as.length;
   const cl = data.panel.filter((p) => p.Status === "Closed");
   const countcl = cl.length;
-  const rg = data.panel.filter((p) => p.Status === "Closed");
+  const rg = data.panel.filter((p) => p.Status === "Registered");
   const countrg = rg.length;
   console.log(op);
   return (

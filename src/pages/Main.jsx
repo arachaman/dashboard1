@@ -12,9 +12,9 @@ const Main = () => {
         <TicketsPanel />
       </section>
       <Container>
-        <section>
+        {/* <section>
           <FilterChartMonthly />
-        </section>
+        </section> */}
         <section className="mt-4">
           <Row>
             <Col>

@@ -92,7 +92,7 @@ function TicketChart() {
   return (
     <div className="App">
       <Row>
-        <Col md={{span: 8}}>
+        <Col md={{span: 8, offset: 2}}>
           <div>
             <Bar options={options} data={dataset} />
           </div>

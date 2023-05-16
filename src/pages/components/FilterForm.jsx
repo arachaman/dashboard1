@@ -70,7 +70,6 @@ const FilterForm = () => {
             <Button>Choose</Button>
           </Col>
         </Row>
-        <Row></Row>
       </section>
     </div>
   );

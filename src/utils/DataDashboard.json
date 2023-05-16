@@ -2,51 +2,103 @@
   "chart": [
     {
       "Name": "Rama",
-      "Ticket_Month_Count": [10, 20, 30, 10, 20, 2, 4, 2, 3, 0, 0, 10],
+      "Ticket_Month_Count": [10, 20, 30, 10, 20, 2, 4, 2, 3, 9, 4, 10],
       "Total_Ticket": "20",
-      "Rate_Avg": [4.5,4,5]
+      "Rate_Avg": [4.5, 4, 5, 4.5, 4, 5, 4.5, 4, 5, 4.5, 4, 5]
     },
     {
       "Name": "Alver",
-      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 5, 13, 15],
       "Total_Ticket": "20",
-      "Rate_Avg": [4.5,3.8,4.3]
+      "Rate_Avg": [4.5, 3.8, 4.3, 4.5, 3.8, 4.3, 4.5, 3.8, 4.3, 4.5, 3.8, 4.3]
     },
     {
       "Name": "Joko",
-      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 24, 2, 15],
       "Total_Ticket": "20",
-      "Rate_Avg": [4.1,3,4.3]
+      "Rate_Avg": [4.1, 3, 4.3, 4.1, 3, 4.3, 4.1, 3, 4.3, 4.1, 3, 4.3]
     },
     {
       "Name": "Widy",
-      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 8, 7, 10],
       "Total_Ticket": "20",
-      "Rate_Avg": [4.2,3,4.3]
+      "Rate_Avg": [4.2, 3, 4.3, 4.2, 3, 4.3, 4.2, 3, 4.3, 4.2, 3, 4.3]
     },
     {
       "Name": "Panji",
-      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 11, 10, 5],
       "Total_Ticket": "20",
-      "Rate_Avg": [4.7,3,4.3]
+      "Rate_Avg": [4.7, 3, 4.3, 4.7, 3, 4.3, 4.7, 3, 4.3, 4.7, 3, 4.3]
     },
     {
       "Name": "Abdullah",
-      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 0, 0, 0],
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 6, 8, 9],
       "Total_Ticket": "20",
-      "Rate_Avg": [4.5,3,4.3]
+      "Rate_Avg": [4.5, 3, 4.3, 4.5, 3, 4.3, 4.5, 3, 4.3, 4.5, 3, 4.3]
     },
     {
       "Name": "Rachman",
-      "Ticket_Month_Count": [2, 14, 16, 12, 15, 1, 40, 23, 32, 0, 0, 0],
+      "Ticket_Month_Count": [2, 14, 16, 12, 15, 1, 40, 23, 32, 12, 6, 8],
       "Total_Ticket": "20",
-      "Rate_Avg": [4.3,3,4.3]
+      "Rate_Avg": [4.3, 3, 4.3, 4.3, 3, 4.3, 4.3, 3, 4.3, 4.3, 3, 4.3]
     },
     {
       "Name": "Hendra",
-      "Ticket_Month_Count": [2, 14, 16, 12, 15, 1, 40, 23, 32, 0, 0, 0],
+      "Ticket_Month_Count": [2, 14, 16, 12, 15, 1, 40, 23, 32, 6, 6, 6],
       "Total_Ticket": "20",
-      "Rate_Avg": [3.4,3,4.3]
+      "Rate_Avg": [3.4, 3, 4.3, 3.4, 3, 4.3, 3.4, 3, 4.3, 3.4, 3, 4.3]
+    }
+  ],
+  "chart2021": [
+    {
+      "Name": "Rama",
+      "Ticket_Month_Count": [50, 20, 30, 10, 20, 2, 4, 2, 3, 9, 4, 10],
+      "Total_Ticket": "20",
+      "Rate_Avg": [4.5, 4, 5, 4.5, 4, 5, 4.5, 4, 5, 4.5, 4, 5]     
+    },
+    {
+      "Name": "Alver",
+      "Ticket_Month_Count": [10, 10, 12, 13, 20, 2, 4, 2, 3, 5, 13, 15],
+      "Total_Ticket": "20",
+      "Rate_Avg": [4.5, 3.8, 4.3, 4.5, 3.8, 4.3, 4.5, 3.8, 4.3, 4.5, 3.8, 4.3]
+    },
+    {
+      "Name": "Joko",
+      "Ticket_Month_Count": [20, 10, 12, 13, 20, 2, 4, 2, 3, 24, 2, 15],
+      "Total_Ticket": "20",
+      "Rate_Avg": [4.1, 3, 4.3, 4.1, 3, 4.3, 4.1, 3, 4.3, 4.1, 3, 4.3]
+
+    },
+    {
+      "Name": "Widy",
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 8, 7, 10],
+      "Total_Ticket": "20",
+      "Rate_Avg": [4.2, 3, 4.3, 4.2, 3, 4.3, 4.2, 3, 4.3, 4.2, 3, 4.3]
+
+    },
+    {
+      "Name": "Panji",
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 11, 10, 5],
+      "Total_Ticket": "20",
+      "Rate_Avg": [4.7, 3, 4.3, 4.7, 3, 4.3, 4.7, 3, 4.3, 4.7, 3, 4.3]
+    },
+    {
+      "Name": "Abdullah",
+      "Ticket_Month_Count": [0, 10, 12, 13, 20, 2, 4, 2, 3, 6, 8, 9],
+      "Total_Ticket": "20",
+      "Rate_Avg": [4.5, 3, 4.3, 4.5, 3, 4.3, 4.5, 3, 4.3, 4.5, 3, 4.3]
+    },
+    {
+      "Name": "Rachman",
+      "Ticket_Month_Count": [2, 14, 16, 12, 15, 1, 40, 23, 32, 12, 6, 8],
+      "Total_Ticket": "20",
+      "Rate_Avg": [4.3, 3, 4.3, 4.3, 3, 4.3, 4.3, 3, 4.3, 4.3, 3, 4.3]
+    },
+    {
+      "Name": "Hendra",
+      "Ticket_Month_Count": [2, 14, 16, 12, 15, 1, 40, 23, 32, 6, 6, 6],
+      "Total_Ticket": "20",
+      "Rate_Avg": [3.4, 3, 4.3, 3.4, 3, 4.3, 3.4, 3, 4.3, 3.4, 3, 4.3]
     }
   ],
   "panel": [
@@ -58,7 +110,8 @@
       "AssignTo": "Abdullah Sapiih",
       "AssignDate": "-",
       "DueDate": "-",
-      "Rate": 5
+      "Rate": 5,
+      "Month": "Januari"
     },
     {
       "Status": "Resolved",
@@ -68,7 +121,8 @@
       "AssignTo": "Hendra Saputra",
       "AssignDate": "05 May 2023",
       "DueDate": "06 May 2023",
-      "Rate": 4
+      "Rate": 4,
+      "Month": "Mei"
     },
     {
       "Status": "Resolved",
@@ -78,7 +132,8 @@
       "AssignTo": "Hendra Saputra",
       "Assign Date": "05 May 2023",
       "DueDate": "06 May 2023",
-      "Rate": 3
+      "Rate": 3,
+      "Month": "Mei"
     },
     {
       "Status": "Closed",
@@ -88,7 +143,8 @@
       "AssignTo": "Irfan Joko",
       "AssignDate": "05 May 2023",
       "Due Date": "06 May 2023",
-      "Rate": 4
+      "Rate": 4,
+      "Month": "Mei"
     },
     {
       "Status": "On Progress",
@@ -98,7 +154,8 @@
       "AssignTo": "Panji Rizky",
       "AssignDate": "04 May 2023",
       "DueDate": "05 May 2023",
-      "Rate": 4
+      "Rate": 4,
+      "Month": "Mei"
     },
     {
       "Status": "On Progress",
@@ -108,7 +165,8 @@
       "AssignTo": "Abdullah Sapiih",
       "AssignDate": "-",
       "DueDate": "-",
-      "Rate": 5
+      "Rate": 5,
+      "Month": "Mei"
     },
     {
       "Status": "Closed",
@@ -118,7 +176,8 @@
       "AssignTo": "Abdullah Sapiih",
       "AssignDate": "-",
       "DueDate": "-",
-      "Rate": 4
+      "Rate": 4,
+      "Month": "Mei"
     },
     {
       "Status": "Registered",
@@ -128,7 +187,8 @@
       "AssignTo": "Panji Rizky",
       "AssignDate": "-",
       "DueDate": "-",
-      "Rate": 4
+      "Rate": 4,
+      "Month": "Mei"
     },
     {
       "Status": "Registered",
@@ -138,7 +198,30 @@
       "AssignTo": "Irfan Joko",
       "AssignDate": "-",
       "DueDate": "-",
-      "Rate": 4
+      "Rate": 4,
+      "Month": "Mei"
+    },
+    {
+      "Status": "Registered",
+      "Priority": "Low",
+      "Reportedby": "Haydan Farizy",
+      "ReportedAt": "08 May 2023 10:29",
+      "AssignTo": "Irfan Joko",
+      "AssignDate": "-",
+      "DueDate": "-",
+      "Rate": 4,
+      "Month": "Mei"
+    },
+    {
+      "Status": "Registered",
+      "Priority": "Low",
+      "Reportedby": "Haydan Farizy",
+      "ReportedAt": "08 May 2023 10:29",
+      "AssignTo": "Irfan Joko",
+      "AssignDate": "-",
+      "DueDate": "-",
+      "Rate": 4,
+      "Month": "Mei"
     },
     {
       "Status": "On Progress",
@@ -148,7 +231,8 @@
       "AssignTo": "Panji Rizky",
       "AssignDate": "04 May 2023",
       "DueDate": "05 May 2023",
-      "Rate": 4
+      "Rate": 4,
+      "Month": "Mei"
     }
   ]
 }
