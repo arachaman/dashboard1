@@ -23,7 +23,7 @@ const Main = () => {
           </Row>
           <Row>
             <Col>
-              <RateChart />
+              {/* <RateChart /> */}
             </Col>
           </Row>
         </section>
