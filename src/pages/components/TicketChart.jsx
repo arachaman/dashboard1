@@ -38,7 +38,44 @@ export const options = {
   },
 };
 
-function TicketChart() {
+export const labels = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "Agustus",
+  "September",
+  "Oktober",
+  "November",
+  "Desember",
+];
+
+export const colorChart = [
+  "red",
+  "blue",
+  "green",
+  "black",
+  "yellow",
+  "orange",
+  "gray",
+  "aqua",
+  "brown",
+  "red",
+  "blue",
+  "green",
+  "black",
+  "yellow",
+  "orange",
+  "gray",
+  "aqua",
+  "brown",
+];
+
+function TicketChart(props) {
+  const dataChart = props.dataChart;
   const refMonth = useRef();
   const refYear = useRef();
 
@@ -58,41 +95,41 @@ function TicketChart() {
     // getData();
   }, []);
 
-  const labels = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "Agustus",
-    "September",
-    "Oktober",
-    "November",
-    "Desember",
-  ];
+  // const labels = [
+  //   "January",
+  //   "February",
+  //   "March",
+  //   "April",
+  //   "May",
+  //   "June",
+  //   "July",
+  //   "Agustus",
+  //   "September",
+  //   "Oktober",
+  //   "November",
+  //   "Desember",
+  // ];
 
-  const colorChart = [
-    "red",
-    "blue",
-    "green",
-    "black",
-    "yellow",
-    "orange",
-    "gray",
-    "aqua",
-    "brown",
-    "red",
-    "blue",
-    "green",
-    "black",
-    "yellow",
-    "orange",
-    "gray",
-    "aqua",
-    "brown",
-  ];
+  // const colorChart = [
+  //   "red",
+  //   "blue",
+  //   "green",
+  //   "black",
+  //   "yellow",
+  //   "orange",
+  //   "gray",
+  //   "aqua",
+  //   "brown",
+  //   "red",
+  //   "blue",
+  //   "green",
+  //   "black",
+  //   "yellow",
+  //   "orange",
+  //   "gray",
+  //   "aqua",
+  //   "brown",
+  // ];
 
   // var datasets = [];
   // DataDashboard.chart.map((row, index) => {
@@ -104,9 +141,23 @@ function TicketChart() {
   //   });
   // });
 
-  //axios
+  //get data from axios
+  const [responseData, setResponseData] = useState();
+  const getData = () => {
+    var datasets = [];
+    dataChart.map((row, index) => {
+      datasets.push({
+        label: row.Name,
+        data: row.Ticket_Month_Count,
+        backgroundColor: colorChart[index],
+        key: index,
+      });
+    });
+    console.log(datasets);
+    setResponseData({ labels, datasets });
+  };
 
-
+  //kalo mau filter, panggil axiosnya lagi karena beda url
   const datasetsFilterMonth = () => {
     var month = refMonth.current.value;
     var year = refYear.current.value;
@@ -118,6 +169,7 @@ function TicketChart() {
           console.log(res.data.data);
 
           var datasets = [];
+          //yang di map respon data
           res.data.data.chart.map((row, index) => {
             datasets.push({
               label: row.Name,
@@ -139,21 +191,20 @@ function TicketChart() {
     }
   };
 
-
   useEffect(() => {
     getData();
   }, []);
 
-  const handleChangeMonth = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    console.log(refMonth.current.value);
-  };
+  // const handleChangeMonth = (e) => {
+  //   const name = e.target.name;
+  //   const value = e.target.value;
+  //   console.log(refMonth.current.value);
+  // };
 
   const submitHandle = (e) => {
     e.preventDefault(filter);
   };
-
+// props.setChildData = 
   if (responseData == null) {
     return <div>loading</div>;
   } else {
@@ -161,7 +212,7 @@ function TicketChart() {
       <div className="App">
         <Form id="filter" onSubmit={submitHandle}>
           <section>
-            <Row>
+            {/* <Row>
               <Col xs={6} md={{ span: 2, offset: 4 }}>
                 <Form.Group className="mb-3">
                   <Form.Select
@@ -204,7 +255,7 @@ function TicketChart() {
                   Choose
                 </Button>
               </Col>
-            </Row>
+            </Row> */}
           </section>
         </Form>
         <div>
