@@ -1,16 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef} from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import axios from "axios";
+import TicketChart from "./TicketChart";
+import DatasetsFilterMonth from './TicketChart'
 
-const FilterForm = () => {
+const FilterForm = (props) => {
+  const filterData =props.filterDate
+  const [year, setYear] = useState([]);
+  const [filter, setFilter] = useState({
+    month: "",
+    year: "",
+  });
   const refMonth = useRef();
   const refYear = useRef();
-  // const [responseData, setResponseData] = useState();
-  const [year, setYear] = useState([]);
-  // const [filter, setFilter] = useState({
-  //   month: "",
-  //   year: "",
-  // });
 
   useEffect(() => {
     const d = new Date();
@@ -21,41 +23,6 @@ const FilterForm = () => {
     setYear(temp);
   }, []);
 
-  // const labels = [
-  //   "January",
-  //   "February",
-  //   "March",
-  //   "April",
-  //   "May",
-  //   "June",
-  //   "July",
-  //   "Agustus",
-  //   "September",
-  //   "Oktober",
-  //   "November",
-  //   "Desember",
-  // ];
-
-  // const colorChart = [
-  //   "red",
-  //   "blue",
-  //   "green",
-  //   "black",
-  //   "yellow",
-  //   "orange",
-  //   "gray",
-  //   "aqua",
-  //   "brown",
-  //   "red",
-  //   "blue",
-  //   "green",
-  //   "black",
-  //   "yellow",
-  //   "orange",
-  //   "gray",
-  //   "aqua",
-  //   "brown",
-  // ];
 
   // const datasetsFilterMonth = () => {
   //   var month = refMonth.current.value;
@@ -96,9 +63,9 @@ const FilterForm = () => {
   //   console.log(refMonth.current.value);
   // };
 
-  // const submitHandle = (e) => {
-  //   e.preventDefault(filter);
-  // };
+  const submitHandle = (e) => {
+    e.preventDefault(filter);
+  };
 
   return (
     <div>
@@ -109,7 +76,7 @@ const FilterForm = () => {
               <Form.Group className="mb-3">
                 <Form.Select
                   name="Month"
-                  onChange={handleChangeMonth}
+                  // onChange={handleChangeMonth}
                   ref={refMonth}
                 >
                   <option value="">Select Month</option>
@@ -132,7 +99,7 @@ const FilterForm = () => {
               <Form.Group className="mb-3">
                 <Form.Select
                   name="Year"
-                  onChange={handleChangeMonth}
+                  // onChange={handleChangeMonth}
                   ref={refYear}
                 >
                   <option value="">Select Year</option>
@@ -143,7 +110,7 @@ const FilterForm = () => {
               </Form.Group>
             </Col>
             <Col md={1}>
-              <Button type="submit" onClick={() => datasetsFilterMonth()}>
+              <Button type="submit" onClick={() => filterData(refYear.current.value,refMonth.current.value)}>
                 Choose
               </Button>
             </Col>

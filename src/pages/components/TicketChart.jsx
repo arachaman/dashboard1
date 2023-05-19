@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import DataDashboard from "../../utils/DataDashboard.json";
-import { InteractionItem } from "chart.js";
+// import DataDashboard from "../../utils/DataDashboard.json";
+// import { InteractionItem } from "chart.js";
+/* eslint-disable */
 import { Row, Col, Form, Button } from "react-bootstrap";
 import axios from "../../redux/axios";
+import Data from "../Main";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -25,121 +27,71 @@ ChartJS.register(
   ArcElement
 );
 
-export const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "top",
-    },
-    title: {
-      display: true,
-      text: "Total Tickets",
-    },
-  },
-};
-
-export const labels = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "Agustus",
-  "September",
-  "Oktober",
-  "November",
-  "Desember",
-];
-
-export const colorChart = [
-  "red",
-  "blue",
-  "green",
-  "black",
-  "yellow",
-  "orange",
-  "gray",
-  "aqua",
-  "brown",
-  "red",
-  "blue",
-  "green",
-  "black",
-  "yellow",
-  "orange",
-  "gray",
-  "aqua",
-  "brown",
-];
-
 function TicketChart(props) {
   const dataChart = props.dataChart;
+  const filterDate = props.filterDate
+  const [year, setYear] = useState([]);
   const refMonth = useRef();
   const refYear = useRef();
-
-  const [year, setYear] = useState([]);
-  const [filter, setFilter] = useState({
-    month: "",
-    year: "",
-  });
 
   useEffect(() => {
     const d = new Date();
     var temp = [];
-    for (var i = 2019; i <= d.getFullYear(); i++) {
+    for (var i = 2022; i <= d.getFullYear(); i++) {
       temp.push(i);
     }
     setYear(temp);
     // getData();
   }, []);
 
-  // const labels = [
-  //   "January",
-  //   "February",
-  //   "March",
-  //   "April",
-  //   "May",
-  //   "June",
-  //   "July",
-  //   "Agustus",
-  //   "September",
-  //   "Oktober",
-  //   "November",
-  //   "Desember",
-  // ];
+  const options = {
+    responsive: false,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "Total Tickets",
+      },
+    },
+  };
 
-  // const colorChart = [
-  //   "red",
-  //   "blue",
-  //   "green",
-  //   "black",
-  //   "yellow",
-  //   "orange",
-  //   "gray",
-  //   "aqua",
-  //   "brown",
-  //   "red",
-  //   "blue",
-  //   "green",
-  //   "black",
-  //   "yellow",
-  //   "orange",
-  //   "gray",
-  //   "aqua",
-  //   "brown",
-  // ];
+  const labels = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
+  ];
 
-  // var datasets = [];
-  // DataDashboard.chart.map((row, index) => {
-  //   datasets.push({
-  //     label: row.Name,
-  //     data: row.Ticket_Month_Count,
-  //     backgroundColor: colorChart[index],
-  //     key: index,
-  //   });
-  // });
+  const colorChart = [
+    "red",
+    "blue",
+    "green",
+    "black",
+    "yellow",
+    "orange",
+    "gray",
+    "aqua",
+    "brown",
+    "red",
+    "blue",
+    "green",
+    "black",
+    "yellow",
+    "orange",
+    "gray",
+    "aqua",
+    "brown",
+  ];
 
   //get data from axios
   const [responseData, setResponseData] = useState();
@@ -154,46 +106,72 @@ function TicketChart(props) {
       });
     });
     console.log(datasets);
-    setResponseData({ labels, datasets });
-  };
+    console.log(filterDate);
 
-  //kalo mau filter, panggil axiosnya lagi karena beda url
-  const datasetsFilterMonth = () => {
-    var month = refMonth.current.value;
-    var year = refYear.current.value;
-    if (month !== "" || year !== "") {
-      axios
-        .get(`dashboard/chartFilter/${year}/${month}`)
-        .then((res) => {
-          // setResponseData(res.data.data);
-          console.log(res.data.data);
+    if(filterDate==null){
+      setResponseData({ labels, datasets });
+      console.log("all")
 
-          var datasets = [];
-          //yang di map respon data
-          res.data.data.chart.map((row, index) => {
-            datasets.push({
-              label: row.Name,
-              data: row.Ticket_Month_Count,
-              backgroundColor: colorChart[index],
-              key: index,
-            });
-          });
-          console.log(datasets);
-          setResponseData({ labels: [labels[month]], datasets });
-        })
-        .catch((err) => {
-          // Handle errors
-          alert(err);
-          console.error(err);
-        });
-    } else {
-      getData();
+    }else{
+      setResponseData({ labels: [[labels[filterDate[1]-1]]], datasets });
+      console.log(filterDate[0])
+      
     }
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  useEffect(()=>{
+    getData()
+  },[dataChart])
+
+
+  // const [responseData, setResponseData] = useState();
+  // const getDataChart = () => {
+  //   var datasets = [];
+  //   dataChart.map((row, index) => {
+  //     datasets.push({
+  //       label: row.Name,
+  //       data: row.Ticket_Month_Count,
+  //       backgroundColor: colorChart[index],
+  //       key: index,
+  //     });
+  //   });
+  //   console.log(datasets);
+  //   setResponseData({ labels, datasets });
+  // };
+
+  // //kalo mau filter, panggil axiosnya lagi karena beda url
+  // const datasetsFilterMonth = () => {
+  //   var month = refMonth.current.value;
+  //   var year = refYear.current.value;
+  //   if (month !== "" || year !== "") {
+  //     axios
+  //       .get(`dashboard/chartFilter/${year}/${month}`)
+  //       .then((res) => {
+  //         // setResponseData(res.data.data);
+  //         console.log(res.data.data);
+
+  //         var datasets = [];
+  //         //yang di map respon data
+  //         res.data.data.chart.map((row, index) => {
+  //           datasets.push({
+  //             label: row.Name,
+  //             data: row.Ticket_Month_Count,
+  //             backgroundColor: colorChart[index],
+  //             key: index,
+  //           });
+  //         });
+  //         console.log(datasets);
+  //         setResponseData({ labels: [labels[month]], datasets });
+  //       })
+  //       .catch((err) => {
+  //         // Handle errors
+  //         alert(err);
+  //         console.error(err);
+  //       });
+  //   } else {
+  //     getData();
+  //   }
+  // };
 
   // const handleChangeMonth = (e) => {
   //   const name = e.target.name;
@@ -201,66 +179,12 @@ function TicketChart(props) {
   //   console.log(refMonth.current.value);
   // };
 
-  const submitHandle = (e) => {
-    e.preventDefault(filter);
-  };
-// props.setChildData = 
   if (responseData == null) {
     return <div>loading</div>;
   } else {
     return (
       <div className="App">
-        <Form id="filter" onSubmit={submitHandle}>
-          <section>
-            {/* <Row>
-              <Col xs={6} md={{ span: 2, offset: 4 }}>
-                <Form.Group className="mb-3">
-                  <Form.Select
-                    name="Month"
-                    onChange={handleChangeMonth}
-                    ref={refMonth}
-                  >
-                    <option value="">Select Month</option>
-                    <option value="1">Januari</option>
-                    <option value="2">Februari</option>
-                    <option value="3">Maret</option>
-                    <option value="4">April</option>
-                    <option value="5">Mei</option>
-                    <option value="6">Juni</option>
-                    <option value="7">Juli</option>
-                    <option value="8">Agustus</option>
-                    <option value="9">September</option>
-                    <option value="10">Oktober</option>
-                    <option value="11">November</option>
-                    <option value="12">Desember</option>
-                  </Form.Select>
-                </Form.Group>
-              </Col>
-              <Col xs={6} md={2}>
-                <Form.Group className="mb-3">
-                  <Form.Select
-                    name="Year"
-                    onChange={handleChangeMonth}
-                    ref={refYear}
-                  >
-                    <option value="">Select Year</option>
-                    {year.map(function (item, i) {
-                      return <option key={i}>{item}</option>;
-                    })}
-                  </Form.Select>
-                </Form.Group>
-              </Col>
-              <Col md={1}>
-                <Button type="submit" onClick={() => datasetsFilterMonth()}>
-                  Choose
-                </Button>
-              </Col>
-            </Row> */}
-          </section>
-        </Form>
-        <div>
-          <Bar options={options} data={responseData} />
-        </div>
+        <div><Bar options={options} data={responseData}/></div>
       </div>
     );
   }
